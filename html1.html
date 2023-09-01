@@ -1,0 +1,147 @@
+<!--프론트 엔드 구성 3요소
+1. html (Hyper Text Markup Language)
+   웹 페이지의 구조와 내용(뼈)
+   Hyper Text : 어딘가와 연결되어 있는 텍스트
+   Markup Language : 태그로 이루어진 언어
+   <>, </> : 태그
+
+2. css(Cascading Style Sheet)
+   웹 페이지의 모양 디자인(가죽)
+   스타일 시트 or 종속형 시트
+
+3. javascript
+   웹 페이지의 행동과 응용 프로그램(근육, 지방)
+   자바와 연관없다.
+   스크립트언어로 되어 있다. -> 응용 프로그램을 제어하는 역할을 한다.
+
+   <br> : break
+   <hr> : horizontal rule
+   &nbsp : non breaking space
+   <p> : paragraph
+   <pre> : preformatted
+   alt : alterate
+-->
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>첫 타이틀</title>
+   </head>
+   <body>
+      <h1 title="h1태그로 작성하였습니다.">
+         1장 홈페이지</h1>
+      <hr>
+      <h2 title="h2태그로 작성하였습니다.">
+         페이지에 타이틀을 다는&nbsp; 예제입니다.<br>
+         타이틀은 브라우저의 타이틀바에 보여집니다.</h2>
+         <hr>
+      <b>진하게</b> <br>
+      <strong>중요한</strong><br>
+      <em>강조</em><br>
+      <i>이텔릭체</i><br>
+      <b><i>진하게 이텔릭체</i></b><br>
+      보통문자<small>한 단계 작은 문자</small><br>
+      <del>삭제</del><br>
+      <ins>추가</ins><br>
+      보통문자<sup>윗첨자</sup><br>
+      보통문자<sub>아래첨자</sub><br>
+      <mark>하이라이팅</mark><br>
+      <hr>
+      <div style="background-color:skyblue; padding:20px;">
+         내가 사람의 방언과 천사의 말을 할지라도
+         <span style="color:red">사랑</span>이 없으면
+         소리 나는 구리와 울리는 꽹가리가 되고,
+         <span style="color:red">사랑</span>이 없으면 아무것도 아니라.
+      </div>
+      <hr>
+      <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA0MjRfMTg0%2FMDAxNjgyMzQxNDQ3MzU2.b4JD2GxUd-yCjU4D5LrYURBFh1JlisapH-D28RNg95og.RIe4WF0Hc5Jwtftz7DwUpV5fXS8xStfdzkIpDYqtFVog.JPEG.olivia_1005%2FIMG_3226.jpg&type=sc960_832" alt="사진주소변경됨" width="100" height="100">
+      <hr>
+      <h1 style="color:blue">웹 페이지 제목</h1>
+      <h2><b>섹션 제목</b></h2>
+      <div>이 문장은 일반적인 텍스트입니다.
+         <b><span style="color:red">강조된 텍스트입니다.</span></b>
+         <span title="추가 설명이 포함되어 있습니다.">이 부분은 추가 설명이 포함된 긴 텍스트입니다.</span>
+      </div>
+      <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA0MjRfMTg0%2FMDAxNjgyMzQxNDQ3MzU2.b4JD2GxUd-yCjU4D5LrYURBFh1JlisapH-D28RNg95og.RIe4WF0Hc5Jwtftz7DwUpV5fXS8xStfdzkIpDYqtFVog.JPEG.olivia_1005%2FIMG_3226.jpg&type=sc960_832" alt="사진주소변경됨" width="150" height="150">
+      <hr style="border-color:gray;">
+      <h3><b><ins>소제목</ins></b></h3>
+      <div><small>이 부분은 추가적인 내용을 담고 있는 문단입니다. 여기서도 다양한 스타일을 적용할 수 있습니다. 
+         이 문장에서는 <i style="color:purple">기울임꼴과 보라색 텍스트가 함께 사용되었습니다.</i></small>
+         <span style="font-size:50px;">추가로 글자 크기도 조정할 수 있습니다.</span></div>
+      <hr>
+      <table border="1">
+         <caption>1학기 성적</caption>
+         <thead>
+            <tr><th>이름</th><th>HTML</th><th>CSS</th></tr>
+         </thead>
+         <tfoot>
+            <tr><th>합</th><th>225</th><th>230</th></tr>
+         </tfoot>
+         <tbody>
+            <tr><td>황기태</td><td>80</td><td>70</td></tr>
+            <tr><td>이재문</td><td>95</td><td>99</td></tr>
+            <tr><td>이병은</td><td>40</td><td>61</td></tr>
+         </tbody>
+      </table>
+      <hr>
+      <ul>
+         <li><a href="http://www.w3.org" target="_blank">w3c(새 윈도우, _blank)</a>
+         <li><a href="http://www.etnews.com" target="_self">전자신문(현재 윈도우, _self)</a>
+         <li><a href="http://www.naver.com" target="_parent">네이버(부모 윈도우, _parent)</a>
+         <li><a href="http://www.mk.co.kr" target="_top">매일경제신문(브라우저 윈도우, _top)</a>
+      </ul>
+      <a href="html2.html" target="_self">페이지 이동</a>
+      <a href="http://www.naver.com" target="_blank"><img scr="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Naver_Logotype.svg/320px-Naver_Logotype.svg.png" alt="네이버 로고 이미지" width="320" height="61"></a>
+   </body>
+</html>
+
+
+
+<!--
+   <div> : division
+      div태그는 블록 단위의 컨테이너 요소다. 즉, 다른 요소들을 그룹화하는데 사용한다.
+      div태그는 다른 요소들과 줄바꿈되어 나타난다.(블록 단위)
+   
+   <span> : span
+      span태그는 인라인 단위의 컨테이너 요소다. 스타일을 적용할 때, 사용된다.
+      span태그는 다른 요소들과 같은 줄에서 나타난다.(인라인 단위)
+   
+   순서 있는 리스트(ordered list) - <ol></ol>
+   1. a.
+   2. b.
+   3. c.
+   <ol>
+      <li></li>
+      <li></li>
+   </ol>
+
+   순서 없는 리스트(unordered list) - <ul></ul>
+   -, *, ●
+   <ul>
+      <li></li>
+      <li></li>
+   </ul>
+
+   정의 리스트(definition list) - <dl></dl>
+   리스트 기호 없이 제목 아래에 텍스트가 있는 것과 같이 순서대로
+   <dl>
+      <dt></dt>
+      <dd></dd>
+      <dt></dt>
+      <dd></dd>
+   </dl>
+
+   a href(anchor hyper reference)
+   하이퍼링크를 생성하는데 사용된다.
+   다른 웹페이지, 동일 페이지의 다른 부분, 파일, 이메일 주소 등을 연결할 수 있다.
+   
+   href 속성은 링크 대상을 지정한다.
+   <a href = "URL">텍스트</a>
+
+   target : _blank(새창, 새탭), _self(현재 창에서 열림)(default)
+   _parent(현재 프레임의 상위 프레임), _top(현재 창의 최상위 프레임)
+   rel : 현재 문서와 링크된 문서사이의 관계를 정의한다.
+   <a href="http://www.naver.com">네이버로 이동하기</a>
+
+
+-->
