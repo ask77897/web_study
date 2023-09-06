@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <title>html5</title>
+    <body>
+        <header>
+            <h1><a href="#">Elvis Presley</a></h1>
+        </header>
+        <section>
+            <h2><a href="#">Who is Elvis?</a></h2>
+            <p>엘비스 프레슬리는 20세기 가장 잘 알려진 미국 가수 중 한 명이었다. 
+                하나의 문화아이콘으로, 엘비스의 음악들은 세계적으로 선풍적인 인기를 끌었으며
+                "로큰롤의 제왕"으로 불리곤한다. 그는 미시시피 주의 투펄로에서 태어났다.
+            </p>
+            <article>
+                <h2><a href="#">His music and life</a></h2>
+                <p>Presley received his first guitar as a gift from his mother on his 11th birthday
+                in 1946 and had his first taste of musical success a few years later when he won a 
+                talent show at Humes High School in Memphis.
+                </p>
+            </article>
+            <nav>
+            <a href=""><< Previous Entries</a><br>
+            </nav>
+        </section>
+        <nav>
+            <ul>
+                <li><h2>Archives</h2>
+                    <ul>
+                        <li><a href="#">Elvis The Music</a></li>
+                        <li><a href="#">Elvis Home Graceland</a></li>
+                        <li><a href="#">Free Listening, Video</a></li>
+                    </ul>
+             </ul>
+            </nav>
+        <hr>
+        <footer>Copyright 2015 Elvis</footer>
+        <hr>
+        <details>
+            <summary>Question</summary>
+            <p>웹 개발자가 알아야 하는 언어 3가지?</p>
+        </details>
+        <details>
+            <summary>Answer</summary>
+            <p>HTML5, CSS, javascript</p>
+        </details>
+        <hr>
+        <p>내일 <mark>HTML5시험</mark><br>
+            시간은<time>09:00</time><br>
+            난이도<meter value="0.8">80%</meter><br>
+            자료 업로딩(20%)
+            <progress value="2" max="10"></progress><br>
+        </p>
+        <hr>
+        <form>
+            이름:<input type="text" value=""><br>
+            암호:<input type="password" value="" maxlength="4"><br>
+            자소서:<textarea cols="20" rows="5" placeholder="이곳에 자기소개서 작성"></textarea>
+        </form>
+        나라:<input type="text" list="countries"><br>
+            <datalist id="countries">
+                <option value="가나"></option>
+                <option value="스위스"></option>
+                <option value="브라질"></option>
+            </datalist>
+        보고 싶은 것: <input type="text" list="what"><br>
+            <datalist id="what">
+                <option value="산"></option>
+                <option value="바다"></option>
+                <option value="도시"></option>
+            </datalist>
+        <hr>
+        <h3>먹고 싶은 것 모두 체크하세요</h3>
+        <form>
+            짜장면<input type="checkbox" value="1">
+            짬뽕<input type="checkbox" value="2" checked>
+            탕수육<input type="checkbox" value="3">
+        </form>
+        <hr>
+        <form>
+            <label>
+                <input type="radio" name="china" value="1">
+                짜장면 <img src="https://i.namu.wiki/i/sjnMOlkQAhy4HnZNUB9Q2WdqWetrpqVr7-pRXGIVaPZc9CkFmja0hSJ0nIpvEAIYmxdK4xHhd0yRhxBdhvGlSe0Vd_JevdIX1hEPxcamzC_w6MBLbvgq8rzbVLFzTQX2vK2sEfVWGK8b8asXTGTk7A.webp" alt="짜장면 이미지" width="100" height="100">
+            </label>
+            <label>
+                <input type="radio" name="china" value="2" checked>
+                짬뽕 <img src="https://i.namu.wiki/i/4t9tVilvhDJZXGwodaapu36qTE4tCW8uxYIS8PnK0bywN9JGMT_IzarJjrZln4P1qjHal1byjYXOtW52pj-NxipLoOv4WcVhZ--X8Ko1ibBXJquxQYF29D83ScEFy2OzEN83ziPtELQhz_T3aWe_tg.webp" alt="짬뽕 이미지" width="100" height="100">
+            </label>
+            <label>
+                <input type="radio" name="china" value="3">
+                탕수육 <img src="https://i.namu.wiki/i/c2aRb9nSgzthptectOJbfwDozuBnIi3zLpwMAfP461SpYFcHzKXFUmZYP241aBksNDYuTjjKs4uboG89XSU37rdMQ7_ys6d_Uk6-bmvWy8vPLRZwD6aKBNL42WeaVtZQi6InTdnHCTpVidkl1ICAXA.webp" alt="탕수육 이미지" width="100" height="100">
+            </label>
+        </form>
+        <hr>
+        <form>
+            색 선택
+            <input type="color" value="#00BFFF"
+            onchange="document.body.style.color=this.value">
+            <br>
+            <h3>홈 제어 시스템 - 온도 조절</h3>
+            지속시간(0.0~10.0 시간):
+            <input type="number" min="0.0" max="10.0" step="0.5"><br><br>
+            온도 설정: 10&deg;
+            <input type="range" min="10" max="30"
+            list="temperatures"> 30&deg;
+            <datalist id="temperatures">
+                <option value="12" label="Low"></option>
+                <option value="20" label="Midium"></option>
+                <option value="28" label="High"></option>
+            </datalist>
+            <hr>
+            email : <input type="email" placeholder="id@host"><br>
+            <input type="submit" value="확인"><br><br>
+            
+        </form>
+
+
+        <hr>
+        <a href="html_lst.html">html 목록</a>        
+    </body>
+</html>
+
+
+<!--
+    웹 폼(web form)
+    사용자로부터 정보를 입력, 전달받는 요소로 데이터를 수집하고 서버로 전송하여 처리한다.
+    웹 폼은 <form>태그를 사용하여 정의 한다.
+        1.<form> : 폼 요소의 컨테이너 역할을 한다. action 속성으로 데이터 전송 경로 설정, 
+                   method로 전송방식을 설정한다.
+        2.<input> : 다양한 종류의 입력 필드, 사용자에게 입력을 받을 수 있다.
+                    type : text, password, checkbox, radio, file, button,...
+        3.<textarea> : 여러 줄의 텍스트를 입력할 수 있는 영역
+        4.<button> : summit button 폼 데이터를 서버로 전송하는 역할, 
+        5.<label> : 입력 필드와 관령된 텍스트 설명
+        6.<datalist> : 데이터 목록을 가진 텍스트 선택 창, 드롭 다운으로 리스트 출력
+                       option 없는 값도 사용자의 입력을 받을 수 있다.
+                       사용자가 입력창에 타이핑을 하면 목록 내부에 있는 경우 자동완성기능을 제공한다.
+        7.<select> : 콤보 박스, 데이터 목록을 가진 텍스트 선택 창
+                     사용자가 선택할 수 있는 항목을 제공하고, 그 범위내에서만 선택이 가능하다.
+
+    select & 콤보박스 
+-->

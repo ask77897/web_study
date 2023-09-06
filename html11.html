@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>html11</title>
+        <style>
+            #menubar{
+                background: olive;
+            }
+            #menubar ul{
+                margin: 0;
+                padding: 0;
+                width: 567px;
+            }
+            #menubar ul li{
+                display: inline;
+                list-style-type: none;
+                padding: 0px 15px;
+            }
+            #menubar ul li a{
+                color: white;
+                text-decoration: none;
+            }
+            #menubar ul li a:hover{
+                color: violet;
+            }
+            input[type=text]{color:red;}
+            input:hover, textarea:hover{background: aliceblue;}
+            input[type=text]:focus, input[type=email]:focus{font-size: 120%;}
+            label{display: block; padding: 10px;}
+            label span{
+                float: left;
+                width: 90px;
+                text-align: right;
+                padding: 10px;
+            }
+            /*@keyframes textsize{
+                from {font-size: 500%;}
+                to {font-size: 100%;}
+            }
+            #anime{
+                animation-name: textsize;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+            #bomb{transition: font-size 5s;}
+            #bomb:hover{font-size: 500%;}*/
+            div{
+                display: inline-block;
+                padding: 5px;
+                color: white;
+                background: olivedrab;
+            }
+            div#rotate{transform: rotate(20deg);}
+            div#skew{transform: skew(0deg,-20deg);}
+            div#translate{transform: translateY(100px);}
+            div#scale{transform: scale(3,1);}
+
+            div#rotate:hover{transform: rotate(80deg);}
+            div#skew:hover{transform: skew(0deg,-60deg);}
+            div#translate:hover{transform: translate(50px,100px);}
+            div#scale:hover{transform: scale(4,2);}
+
+            div#scale:active{transform: scale(1,5);}
+        </style>
+    </head>
+    <body>
+        <nav id="menubar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Espresso</a></li>
+                <li><a href="#">Cappuccino</a></li>
+                <li><a href="#">Cafe Latte</a></li>
+                <li><a href="#">F.A.Q</a></li>
+            </ul>
+        </nav>
+        <h3>CONTACT US</h3>
+        <hr>
+        <form>
+            <label>
+                <span>Name</span><input type="text" placeholder="Elvis"><br>
+            </label>
+            <label>
+                <span>Email</span><input type="email" placeholder="elvis@graceland.com">
+            </label>
+            <label>
+                <span>Comment</span><textarea placeholder="메세지를 남겨주세요"></textarea>
+            </label>
+            <label>
+                <span></span><input type="submit" value="submit">
+            </label>
+        </form>
+<!--텍스트 하나를 3초에 걸쳐 font-size 500% -> 100% 축소되는 애니메이션, 무한반복으로 작성-->
+        <p id="anime">작아진다~</p>
+        <p id="bomb">꽝!</p>
+        <hr>
+        <h3>다양한 Transform</h3>
+        아래는 회전(rotate), 기울임(skew), 이동(translate),
+        확대/축소(scale)가 적용된 사례이다. 또한 마우스를 올리면 추가적 변환이 일어난다
+        <hr>
+        <div id="rotate">rotate 20 deg</div>
+        <div id="skew">skew(0,-20 deg)</div>
+        <div id="translate">translateY(100px)</div>
+        <div id="scale">scale(3,1)</div>
+        
+
+
+
+        <hr>
+        <footer><a href="html_lst.html">html list</a></footer>
+    </body>
+</html>
+
+<!--
+
+-->

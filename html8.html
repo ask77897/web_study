@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>html8</title>
+        <!-- <style>
+            h3, li{color:brown;}
+            div>div>strong{background: yellow;}
+            ul strong{color:dodgerblue;}
+            .warning{color: red;}
+            body.main{background: aliceblue;}
+            #list{background: mistyrose;}
+            #list span{color: forestgreen;}
+            h3:first-letter{color:red;}
+            li:hover{background: yellowgreen;}
+        </style> -->
+        <style>
+            h1{font-size: 32px;}
+            p{color:red;}
+            .list li{background-color: yellowgreen;}
+            .list li:hover{background-color: coral;}
+            .lset li:nth-child(odd){background-color: tomato;}
+            .lset li:nth-child(even){background-color: slateblue;}
+            #container p{color:blue;}
+            #container>p.exception{color: yellowgreen;}
+            a:hover{background-color: yellow;}
+            #colortag{
+                margin-left: 30px;
+                margin-right: 30px;
+                margin-bottom: 10px;
+                color: white;
+            }
+        </style>
+        <style>
+            h3{text-align: right;}
+            .p1 span{text-decoration: line-through;}
+            .p2 strong{text-decoration: overline;}
+            .p1{text-indent: 3em; text-align: justify;}
+            .p2{text-indent: 1em; text-align: center;}
+            .box span{background: deepskyblue;}
+            div.box{
+                background: yellow;
+                border-style: solid;
+                border-color: peru;
+                margin:40px;
+                border-width: 20px;
+                padding: 20px;
+            }
+            .p{
+                background: #90D000;
+                width: 300px;
+                padding: 20px;
+            }
+            #round1{border-radius: 50px;}
+            #round2{border-radius: 0px 20px 40px 60px;}
+            #round3{border-radius: 0px 20px 40px;}
+            #round4{border-radius: 0px 20px;}
+            #round5{border-radius: 50px; border-style: dotted;}
+        </style>
+    </head>
+    <body>
+    <!-- <body class="main">
+        <h3>Web Programming</h3>
+        <hr>
+        <div>
+            <div>
+                2학기 <strong>학습내용</strong>입니다.
+            </div>
+            <ul id="list">
+                <li><span>HTML5</span></li>
+                <li><strong>CSS</strong></li>
+                <li>javascript</li>
+            </ul>
+            <div class="warning">60점 이하는 F</div>
+        </div> -->
+        <!--
+            1. <h1> 태그의 글자 크기 32px
+            2. p태그의 글자색 빨간색
+            3. .list 클래스가 지정된<ul> 안의 li들은 배경색 연두색
+            4. container 안에 있는 p태그는 글자 파란색,exception class를 가진 p태그는 글자 연두색
+            5. 링크에 마우스를 올리면 배경색이 노란색
+        -->
+        <div id="container">
+            <h1>Title</h1>
+            <p>This is a paragraph.</p>
+            <p class = "exception">This is a paragraph.</p>
+            <ul class="list">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+            <ul class="lset">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ul>              
+        </div>
+        <a href="#">Link</a>
+        <p> END </p>
+        
+        <div id="colortag" style="background-color: #008B8B;">
+            darkcyan(#008B8B)
+        </div>
+        <div id="colortag" style="background-color: #6B8E23;">
+            olivedrab(#6B8E23)
+        </div>
+        <hr>
+        <hr>
+        <h3>텍스트 꾸미기</h3>
+    	<p class="p1" style="color: black;">HTML의 태그만으로 기존의
+		워드 프로세서와 같이 들여쓰기, 정렬, 공백, 
+		간격 등과 세밀한 <span>텍스트 제어</span>를
+		할 수 없다. </p>
+        <p class="p2" style="color: black;">그러나,
+        <strong>스타일 시트</strong>는 이를
+		 가능하게 한다. 들여쓰기, 정렬에 대해서
+		 알아본다
+	    </p>
+        <div class="box">
+            <span>DIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIVDIV
+            </span>
+        </div>
+        <hr>
+        <p class="p" id="round1">반지름 50 픽셀의 둥근 모서리</p>
+        <p class="p" id="round2">반지름 0, 20, 40, 60 둥근 모서리</p>
+        <p class="p" id="round3">반지름 0, 20, 40, 20 둥근 모서리</p>
+        <p class="p" id="round4">반지름 0, 20, 0, 20 둥근 모서리</p>
+        <p class="p" id="round5">반지름 50의 둥근 점선 모서리</p>
+
+
+
+    <hr>
+    </body>
+    <head>
+        <style>
+            #div{
+                background-color: skyblue;
+                background-size: 100px 100px;
+                background-image: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA0MjRfMTg0%2FMDAxNjgyMzQxNDQ3MzU2.b4JD2GxUd-yCjU4D5LrYURBFh1JlisapH-D28RNg95og.RIe4WF0Hc5Jwtftz7DwUpV5fXS8xStfdzkIpDYqtFVog.JPEG.olivia_1005%2FIMG_3226.jpg&type=sc960_832);
+                background-repeat: repeat-y;
+                background-position: center center;
+            }
+            #div{
+                width: 200px;
+                height: 200px;
+                color: blueviolet;
+                font-size: 16px;
+            }
+            .droptext{text-shadow: 3px 3px;}
+            .redtext{text-shadow: 3px 3px red;}
+            .blurtext{text-shadow: 3px 3px 5px skyblue;}
+            .glowtext{text-shadow: 0px 0px 3px red;}
+            .wordarttext{color: white; text-shadow: 0px 0px 3px darkblue;}
+            .threedtext{color: white; text-shadow: 2px 2px 4px black;}
+            .multieffect{color: yellow; text-shadow: 2px 2px 2px black, 0 0 25px blue, 0 0 5px darkblue;}
+        </style>
+    </head>
+    <body>
+        <h3>박스에 배경 꾸미기</h3>
+        <hr>
+        <div id="div"> SpongeBob is an over-optimistic sponge that annoys other characters.</div>
+        <h3>텍스트 그림자 만들기</h3>
+        <hr>
+        <div class="droptext">Drop Shadow</div>
+        <div class="redtext">Color Shadow</div>
+        <div class="blurtext">Blur Shadow</div>
+        <div class="glowtext">Glow Effect</div>
+        <div class="wordarttext">WordArt Effect</div>
+        <div class="treedtext">3D Effect</div>
+        <div class="multieffect">Multi Shadow Effect</div>
+    
+    
+    
+        <hr>
+    <a href="html_lst.html">html 목록</a>
+    </body>
+</html>
+
+<!--
+    선택자(Selector)
+    HTML 요소를 식별하여 스타일 규칙을 적용하는데 사용되는 패턴, 표현
+    셀렉터를 사용해서 특정 요소나 요소 그룹을 선택하고, 해당요소 에 스타일을 적용할 수 있다.
+    1.태그 이름 (tag selector) : html태그 이름을 셀렉터로 선택하여 사용한다.
+    p{color:red;}
+
+    2.ID선택자 (ID selector) : HTML에 지정된 고유한 ID 속성 값을 기반으로 선택하여 사용한다.
+    ID이름은 해시(#)로 시작한다. ID는 고유한 속성이므로 기본키와 같이 하나만 존재하여야 한다.
+    <p id="sample"> id를 사용해보는 예제다.</p>
+    #sample{color:red;}
+
+    3.클래스 선택자 (class selector) : HTML에 지정된 클래스 속성 값을 기반으로 선택하여 사용한다.
+    클래스 이름은 마침표(.) 로 시작한다. 여러 개의 클래스를 한번에 지정할 경우 공백으로 구분한다.
+    <p class="example"> id를 사용해보는 예제다.</p>
+    .example{color:red;}
+
+    .example1 .example2 .example3{color:red;}
+    태그이름.클래스이름의 형태로도 선언이 가능하다.
+    p.example{color:red;}
+    클래스 이름은 여러개가 될 수 있다. 서로 다른 태그여도 같은 이름을 사용할 수 있다.
+    클래스 이름을 가진 특정 태그에만 선택하여 사용하고 싶을 때
+
+    ID 선택자는 클래스 선택자보다 우선순위가 높다. 클래스 선택자는 태그 이름 선택자보다 우선순위가 높다.
+    ID > Class > Tag name
+
+    4.자손 및 자식 관계(CSS combinators) : 여러 개의 요소 중 특정 관계 있는 하위요소나 자식 요소만을 선택한다.
+    -자손(combinator : 공백) : 조상과 후손 사이의 모든 하위 요소들을 대상으로 한다.
+    -자식(combinator : >) : 직접적인 자식 요소들을 대상으로 한다.
+
+    div ul li{color:red;}
+    div 안에 있는 ul 안에 있는 li에 적용한다.
+
+    div>ul>li{color:red;}
+    div 바로 아래 있는 ul 바로 아래 있는 li에 적용한다.
+    <div>
+        <ul>
+            <li>
+
+    5.가상 클래스(Pseudo-Class) : 특정 상태나 위치 등 특별한 조건을 가진 요소를 선택하기 위해 사용된다.
+    a:hover{color:red;}
+    a링크 위에 마우스가 올라가면 
+
+    ul li:first-child{
+        font-weight:bold;
+    }
+    li 첫번째 아이템만 굵게
+    
+    ul li:nth-child(odd){
+        background-color:#f54f23;
+    }
+    리스트 홀수번째 아이템만 배경색 설정
+
+    6.전체 선택자(Universal Selector) : 모든 HTML 요소를 선택, 기호는 *
+    *{
+        margin : 0;
+    }
+    7.속성 선택자(Attribute Selector) : 특정 속성 값을 가진 HMTL 요소를 선택, 기호는 대괄호[]
+    input[type="submit"]{
+        color:white;
+    }
+
+
+
+    색상
+    1.이름을 사용한 색상 지정(140개)
+    2.16진수 코드를 이용한 색상 지정(ex.#008B8B)
+        2진법 : 0 1
+        10진법 : 0 1 2 3 4 5 6 7 8 9
+        16진법 : 0 1 2 3 4 5 6 7 8 9 A B C D E F
+        16진법을 사용하려면 2진법을 통해서 변환하자,
+    3.RGB, RGBA : Red Green Blue Alpha(투명도)
+    4.HSL, HSLA : Hue(색조), Saturation(채도), Lightness(밝기), Alpha
+
+
+    텍스트 꾸미기
+    1.font-size : 글자 크기
+    2.color : 글자색
+    3.font-weight : 글자 두께(normal, bold)
+    4.text-decoration : 텍스트 장식(밑줄, 취소선 등 none, underline, overline, line-through 등)
+    5.text-align : 텍스트 정렬(left, center, right)
+    6.line-height : 줄 간격
+    7.letter-spacing : 문자 간격
+    8.text-transform : 대소문자 변환(uppercase/lowercase/capitalize)
+
+
+    박스 모델
+    CSS에서 레이아웃과 공간 배치를 다루는 개념
+    HTML 요소들은 모두 사각형 박스로 간주되며, 여러가지 속성을 가지고 있다.
+    1.콘텐츠 영역
+    width, height
+    2.패딩 영역
+    padding-top, padding-right, padding-bottom, padding-left, padding:24px 0px 0px 24px
+    3.테두리 영역
+    border-style, border-width, border-color
+    4.마진 영역
+    margin-top, margin-right, margin-bottom, margin-left, margin
+
+    실제 너비 : width + padding-right + padding-left + border-left-width + border-right-width + margin-right + margin-left
+
+-->
