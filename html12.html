@@ -79,15 +79,13 @@
                 //alert("팰린드롬입니다.")
                 document.write("팰린드롬입니다.")
             }
-            else if(cnt!=Math.round(text.length/2)){
+            else{
                 //alert("팰린드롬이 아닙니다.")
                 document.write("팰린드롬이 아닙니다.")
             }
-                
-            
         </script>
         <hr>
-        <script>//문제3
+        <!-- <script>//문제3
             var a = "";
             var b = text[0];
             var cnt = 0;
@@ -102,6 +100,20 @@
             }
             a += b + cnt;
             document.write(a)
+        </script> -->
+        <script>//문제3
+            var a = text[0];
+            var cnt = 0;
+            for(var i=0; i<text.length; i++){
+                if(text[i]===a){
+                    cnt++;
+                }else{
+                    document.write(a + cnt);
+                    a = text[i];
+                    cnt = 1;
+                }
+            }
+            document.write(a + cnt)
         </script>
 
 
