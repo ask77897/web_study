@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>html19</title>
+    </head>
+    <body onload="init()">
+        <h3>마우스를 누른 채 드래깅해서 그림 그리기</h3>
+        <hr>
+        <canvas id="myCanvas" style="background-color: aliceblue;" width="400" height="300">
+        </canvas><br>
+        <button id="clearbtn" onclick="clearbutton()">그림 지우기</button>
+        <script>
+            var canvas, context;
+            function init() {
+                canvas = document.getElementById("myCanvas");
+                context = canvas.getContext("2d");
+
+                context.lineWidth = 2; // 선 굵기 2
+                context.strokeStyle = "blue";
+
+                canvas.addEventListener("mousemove", function (e) { move(e) }, false);
+                canvas.addEventListener("mousedown", function (e) { down(e) }, false);
+                canvas.addEventListener("mouseup", function (e) { up(e) }, false);
+                canvas.addEventListener("mouseout", function (e) { out(e) }, false);
+
+                /*document.getElementById('clearbtn').addEventListener('click', clearbutton, false)*/
+                //clearbutton 을 clearbutton()으로 입력하면 작동안함
+                //이벤트 핸들러 - 함수 참조(함수를 호출하는게 아니고, 함수 자체를 전달하는것이다.)
+                //clearbutton() -  반환 값이 Undefined 또는  return 값이 전달된다.
+            }
+
+            var startX=0, startY=0; // 드래깅동안, 처음 마우스가 눌러진 좌표
+            var dragging=false;
+            function draw(curX, curY) { 
+                context.beginPath();
+                context.moveTo(startX, startY);
+                context.lineTo(curX, curY);
+                context.stroke();
+            }
+            function down(e) { 
+                startX = e.offsetX; startY = e.offsetY; dragging = true;
+            }
+            function up(e) { dragging = false; }
+            function move(e) {
+                if(!dragging) return; // 마우스가 눌러지지 않았으면 리턴
+                var curX = e.offsetX, curY = e.offsetY;
+                draw(curX, curY);
+                startX = curX; startY = curY;
+            }
+            function out(e) { dragging = false; }
+            function clearbutton(){
+                context.clearRect(0,0,canvas.width, canvas.height);
+                //context.beginPath();
+            }
+        </script>
+    </body>
+</html>
+
+<!--
+    윈도우 브라우저
+    window : window 객체는 창이나 탭에 대한 전역 객체, 웹 페이지 최상위 요소
+    document : 현재 문서에 대한 인터페이스, HTML문서의 모든 요소와 내용을 접근해서 조작할 수 있다.
+    navigator : 현재 사용 중인 브라우저 및 운영체제에 접근할 수 있다.
+    location : 현재 url과 관련된 정보 기능을 제공한다.
+    history : 브라우저 내에서 방문한 url들의 기록(history stack)에 접근하여 조작할 수 있다.
+
+    HTTP(Hypertext Transfer Protocol) : 웹에서 데이터를 주고 받기 위한 프로토콜
+    프로토콜 : 컴퓨터에서 데이터 교환 방식을 정의하는 규칙 체계 (통신 프로토콜 HTTP)
+    클라이언트(브라우저)와 서버간의 통신을 담당하며 요청(request)과 응답(response) 형식으로 이루어진다.
+    클라이언트가 HTTP 요청을 보내고, 서버가 해당 요청에 대한 응답을 반환한다. HTML(문서, 이미지, 동영상 등)
+
+    쿠키(Cookie)
+    웹 서버가 클라이언트에게 정보를 저장하고, 추적하기 위해 사용되는 작은 데이터 조각.
+    쿠키는 클라이언트의 로컬 컴퓨터에 저장, 다음 통신 요청시 해당 정보를 함께 전송해서 상태 유지 및 개인화 기능 구현
+
+    웹 스토리지(Web storage)
+    웹 스토리지는 웹 어플리케이션에서 데이터를 임시, 영구 저장을 하기 위한 매커니즘.
+    웹 스토리지는 클라이언트 측에서 관리
+    1.localStorage : 객체를 통해 데이터를 영구저장. 동일 도메인 내에서 모든 페이지 및 세션 간에 공유
+    2.sessionStorage :  객체를 통해 데이터를 임시저장. 현재 세션에서만 유지되기 때문에, 페이지가 닫히면 삭제
+
+    쿠키? 웹 스토리지?
+    웹 스토리지는 쿠키보다 용량 제한이 크고, API 간단하고, 보안도 우수하다.
+    로그인 정보, 사용자 설정
+
+    웹 워커(Web worker) : 브라우저의 메인 쓰레드와 별도로 백그라운드에서 실행되는 스크립트
+    오래 걸리는 작업을 백그라운드에서 처리해서 메인 쓰레드가 멈추거나 지연되지 않도록 만들어준다.
+    1.백그라운드에서 실행 : 메인 스크립트와 별도로 백그라운드에서 실행된다. 오래 걸리는 작업이 UI 업데이트를 차단하거나 반응을 저하시키지 않도록
+    2.멀티 쓰레딩 : 자바스크립트 는 기본적으로 싱글 쓰레드 언어다. 즉 한번에 하나씩 처리하는 언어. 그러나, 웹 워커를 사용하여 별도의 쓰레드에서 코드를 실행하여
+    동시에 여러 작업을 수행할 수 있다.
+    3.메시지 기반 통신 : 메인 스크립트와 웹 워커사이의 데이터 교환은 postMessage API와 onmessage 이벤트 핸들러를 사용한다.
+    4.제한된 기능 : DOM에 직접 접근할 수 없으며, 로컬 파일 시스템에도 접근할 수 없다.(windowm, document)
+
+    var worker = new Worker('worker.js')
+    worker.onmessage = function(event){
+        console.log(event.data);
+    };
+    worker.postMessage("안녕하세요.");
+
+    //worker.js
+    self.onmessage = function(event){
+        console.log(event.data);
+        self.postMessage("안녕하세요 저는 다른 쓰레드입니다.")
+    }
+
+-->

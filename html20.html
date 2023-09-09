@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>html20</title>
+        <style>
+            #map{
+                height: 800px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <h3>지도에 위도와 경도 출력</h3>
+        <hr>
+        <div id="msg">이 곳에 위치 정보 출력</div>
+        <div id="map"></div>
+        <script>
+            if(!navigator.geolocation)
+                alert("지원하지 않음");
+            else
+                navigator.geolocation.getCurrentPosition(found);
+
+                function found(position){
+                    var now = new Date(position.timestamp);
+                    var lat = position.coords.latitude;
+                    var lon = position.coords.longitude;
+                    var acc = position.coords.accuracy;
+
+                    lat = lat.toPrecision(6); lon = lon.toPrecision(6);
+
+                    var text = "현재 시간 "+ now.toUTCString() + "<br>";
+                    text += "현재 위치 (위도" + lat +", 경도" + lon +")<br>";
+                    text += "정확도 "+ acc +"m<br>";
+                    
+                    document.getElementById('msg').innerHTML = text;
+                    var img = new image();
+                    img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + lat
+                    + "," + lon + "&zoom=13&size=400x300&sensor=false&markers=color:red%7Clabel:C%7C"+lat +"," +lon;
+    
+                    document.getElementById('map').appendChild(img);
+                }
+
+        </script> -->
+        <!-- <h3> my google maps</h3>
+        <div id="map"></div>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3gbzf5V-PqQ8Z9knu9ZLdrI4rJErtolY&callback=initMap&libraries=&v=weekly" async></script>
+        <script type="text/javascript">
+            function initMap(){
+                const curLoc = {lat: -25.344, lng: 131.036};
+                const map = new google.maps.Map(document.getElementById('map'),{
+                    zoom : 5,
+                    center:curLoc,
+                });
+                const marker = new google.maps.Marker({
+                    position: curLoc,
+                    map: map,
+                });
+            }
+        </script> -->
+        <script>
+            var timeWorker = new Worker("time.js");
+        
+            timeWorker.onmessage = function(e) {
+                document.getElementById('d').innerHTML = e.data;
+            }
+            
+            function start(){
+                timeWorker.postMessage("start"); 
+            }
+            function stop(){
+                timeWorker.postMessage("stop"); 
+            }
+            
+        </script>
+        <div>timer</div>
+        <div id="d"></div>
+        <button id="start" onclick="start()">start</button>
+        <button id="stop" onclick="stop()">stop</button>
+    </body>
+</html>
+
+
+<!--
+    
+-->

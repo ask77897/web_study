@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head><title>onload로 이미지 크기 출력</title>
+        <script>
+            function changeImage(imageUrl, textElement) {
+            var img = document.getElementById("myImg");
+            img.src = imageUrl
+            
+            var textCon = document.getElementsByClassName('p')
+            for(var i = 0; i<textCon.length; i++){
+                textCon[i].classList.remove("selected");
+            }
+            textElement.classList.add("selected");
+
+            img.onload = function () {
+                var mySpan = document.getElementById("mySpan");
+                mySpan.innerHTML = img.width + "x" + img.height;
+            }
+        }
+        window.onload = function(){
+            var textCon = document.getElementById("img1");
+            textCon.classList.add("selected");
+            changeImage('https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA0MjRfMTg0%2FMDAxNjgyMzQxNDQ3MzU2.b4JD2GxUd-yCjU4D5LrYURBFh1JlisapH-D28RNg95og.RIe4WF0Hc5Jwtftz7DwUpV5fXS8xStfdzkIpDYqtFVog.JPEG.olivia_1005%2FIMG_3226.jpg&type=sc960_832', textCon)
+        }
+        </script>
+        <style>
+            .p{
+                display: inline-block;
+                border: 1px solid;
+                border-radius: 5px;
+                padding: 5px;
+            }
+            .selected{
+                background-color: #FAFFA6;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>onload로 이미지 크기 출력</h3>
+        <hr>
+        <form>
+        
+        <p class="p" id="img1" onmouseover="changeImage('https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA0MjRfMTg0%2FMDAxNjgyMzQxNDQ3MzU2.b4JD2GxUd-yCjU4D5LrYURBFh1JlisapH-D28RNg95og.RIe4WF0Hc5Jwtftz7DwUpV5fXS8xStfdzkIpDYqtFVog.JPEG.olivia_1005%2FIMG_3226.jpg&type=sc960_832',this)">img1</p>
+        <p class="p" onmouseover="changeImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0fd-5RllhkMRGL6CZV_uI537f8VFnfb24OUlGs4_XEjdDS1cLGq3fp8v2TpDHPRgtxA8&usqp=CAU',this)">img2</p>
+        <p class="p" onmouseover="changeImage('https://th.bing.com/th/id/OIP.32QOGlfDx73ljlMl7G5RLAHaHa?w=201&h=201&c=7&r=0&o=5&pid=1.7',this)">img3</p>
+        
+        <p>이미지 크기 : <span id="mySpan"></span></p>
+        <img id="myImg" src="">
+        </form>
+        
+    </body>
+</html>
+
+
+<!--
+
+-->
